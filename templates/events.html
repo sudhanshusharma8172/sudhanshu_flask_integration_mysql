@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Available Events</h1>
+
+<ul>
+    {% for event in events %}
+        <li>
+            <b>{{ event.name }}</b> - {{ event.date }}
+            <a href="{{ url_for('register', event_id=event.id) }}">Register</a> |
+            <a href="{{ url_for('participant', event_id=event.id) }}">View Participant</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

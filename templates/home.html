@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to Event Registration System</h1>
+<p>Join us in exciting <b>Hackathons</b>, <b>Workshops</b>, and <b>Tech Events</b>!</p>
+
+<!-- Image slider -->
+<div class="gallery">
+    <img id="slider" src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Hackathon">
+</div>
+
+<p>
+    👉 Explore our <a href="{{ url_for('events') }}">Upcoming Events</a>  
+    and register today!
+</p>
+{% endblock %}
